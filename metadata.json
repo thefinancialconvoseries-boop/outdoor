@@ -1,0 +1,6 @@
+{
+  "name": "The Financial Convo — Cinematic Invitation",
+  "description": "A 60-second premium cinematic invitation film for The Financial Convo, an exclusive outdoor financial experience in Cape Coast, Ghana.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
