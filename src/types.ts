@@ -1,24 +1,31 @@
-export interface SceneTiming {
+export interface Campus {
   id: string;
   name: string;
-  startSec: number;
-  endSec: number;
-  phaseLabel: string;
-  headline: string;
-  subtitle?: string;
-  keyPoints?: string[];
-  imageSrc?: string;
-  cameraMovement: 'slow-pan-right' | 'slow-zoom-in' | 'slow-zoom-out' | 'steady-tracking' | 'gentle-drift';
+  order: number;
 }
 
-export interface ActivityDetail {
+export interface DeliveryChannel {
   id: string;
-  title: string;
-  tagline: string;
-  startSec: number;
-  endSec: number;
+  location: string;
+  style: string;
   description: string;
-  keyElements: string[];
 }
 
-export type AspectRatioMode = '16:9' | '2.39:1' | '9:16';
+export interface HubPod {
+  id: string;
+  step: number;
+  name: string;
+  isExitPoint?: boolean;
+  teach: string;
+  show: string;
+  doAction: string;
+}
+
+export type DecisionStatus = 'tbd' | 'set';
+
+export interface OpenDecision {
+  id: string;
+  label: string;
+  status: DecisionStatus;
+  detail: string;
+}

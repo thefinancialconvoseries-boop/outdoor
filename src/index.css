@@ -1,47 +1,57 @@
 @import "tailwindcss";
 
+@theme {
+  /* Paper & ink — the base surface */
+  --color-paper: #FBF8F2;
+  --color-paper-dim: #F1EAD9;
+  --color-paper-line: #E4DAC4;
+
+  --color-ink: #221F1A;
+  --color-ink-soft: #6B6558;
+  --color-ink-faint: #A39C8B;
+
+  /* Blueprint blue — used sparingly, for diagrams & precision marks */
+  --color-blueprint: #2E4F73;
+  --color-blueprint-soft: #7C93AB;
+  --color-blueprint-wash: #E9EEF3;
+
+  /* Warm accent — the one color that carries action & warmth */
+  --color-accent: #BE5A29;
+  --color-accent-soft: #E9C7A9;
+  --color-accent-wash: #F6E9DC;
+
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', monospace;
+}
+
 @layer base {
   body {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--font-sans);
+    background-color: var(--color-paper);
+    color: var(--color-ink);
   }
 
-  .font-cinematic {
-    font-family: 'Cinzel', serif;
-  }
-
-  .font-display {
-    font-family: 'Syne', sans-serif;
+  ::selection {
+    background-color: var(--color-accent-soft);
+    color: var(--color-ink);
   }
 }
 
-@keyframes filmGrain {
-  0%, 100% { transform: translate(0, 0); }
-  10% { transform: translate(-2%, -3%); }
-  30% { transform: translate(3%, 1%); }
-  50% { transform: translate(-1%, 2%); }
-  70% { transform: translate(2%, -1%); }
-  90% { transform: translate(-3%, 2%); }
+/* A faint architectural grid — the "blueprint sheet" texture, used behind the hero only */
+.blueprint-grid {
+  background-image:
+    linear-gradient(var(--color-paper-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-paper-line) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
 }
 
-.animate-film-grain {
-  animation: filmGrain 0.3s steps(4) infinite;
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes subtleFloat {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-4px) scale(1.005); }
-}
-
-.animate-subtle-float {
-  animation: subtleFloat 6s ease-in-out infinite;
-}
-
-@keyframes shimmerGlow {
-  0% { opacity: 0.3; }
-  50% { opacity: 0.85; }
-  100% { opacity: 0.3; }
-}
-
-.animate-shimmer {
-  animation: shimmerGlow 3s ease-in-out infinite;
+.animate-rise-in {
+  animation: riseIn 0.6s ease-out both;
 }
