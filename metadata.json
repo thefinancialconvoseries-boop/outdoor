@@ -1,6 +1,5 @@
 {
   "name": "The Financial Blueprint — Campaign Roadmap",
   "description": "A campaign roadmap microsite for The Financial Blueprint, a Financial Convo series initiative bringing financial literacy Hub Weeks to UCC, OLA Training College, Bakaano Nursing, and CCTU.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "requestFramePermissions": []
 }

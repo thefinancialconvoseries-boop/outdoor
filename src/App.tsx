@@ -1,9 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
-import React from 'react';
 import { NavHeader } from './components/NavHeader';
 import { Hero } from './components/Hero';
 import { PhaseOneSection } from './components/PhaseOneSection';
