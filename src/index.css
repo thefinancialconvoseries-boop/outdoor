@@ -2,23 +2,23 @@
 
 @theme {
   /* Paper & ink — the base surface */
-  --color-paper: #FBF8F2;
-  --color-paper-dim: #F1EAD9;
-  --color-paper-line: #E4DAC4;
+  --color-paper: #FFFFFF;
+  --color-paper-dim: #EEF2FC;
+  --color-paper-line: #D7E0F5;
 
-  --color-ink: #221F1A;
-  --color-ink-soft: #6B6558;
-  --color-ink-faint: #A39C8B;
+  --color-ink: #0B1330;
+  --color-ink-soft: #4C5578;
+  --color-ink-faint: #9AA0C2;
 
   /* Blueprint blue — used sparingly, for diagrams & precision marks */
-  --color-blueprint: #2E4F73;
-  --color-blueprint-soft: #7C93AB;
-  --color-blueprint-wash: #E9EEF3;
+  --color-blueprint: #1B2A6B;
+  --color-blueprint-soft: #8B97F0;
+  --color-blueprint-wash: #E4E9FB;
 
   /* Warm accent — the one color that carries action & warmth */
-  --color-accent: #BE5A29;
-  --color-accent-soft: #E9C7A9;
-  --color-accent-wash: #F6E9DC;
+  --color-accent: #2F3AE4;
+  --color-accent-soft: #A9B7F5;
+  --color-accent-wash: #E4E9FB;
 
   --font-display: 'Fraunces', 'Georgia', serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

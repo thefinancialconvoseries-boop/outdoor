@@ -65,24 +65,24 @@ export const RegistrationSection: React.FC = () => {
   };
 
   const inputClasses =
-    'w-full rounded-lg border border-[#221F1A]/20 bg-transparent px-4 py-3 text-sm text-[#221F1A] placeholder:text-[#A39C8B] focus:outline-none focus:border-[#BE5A29] transition-colors disabled:opacity-60';
+    'w-full rounded-lg border border-[#0B1330]/20 bg-transparent px-4 py-3 text-sm text-[#0B1330] placeholder:text-[#9AA0C2] focus:outline-none focus:border-[#2F3AE4] transition-colors disabled:opacity-60';
 
   return (
-    <section id="register" className="w-full py-16 sm:py-24 border-t border-[#E4DAC4]">
+    <section id="register" className="w-full py-16 sm:py-24 border-t border-[#D7E0F5]">
       <div className="max-w-lg mx-auto px-5 sm:px-8">
-        <SectionHeading index="06" eyebrow="Scan & register" title="Join Hub Week" />
+        <SectionHeading index="06" title="Join Hub Week" />
 
-        <p className="text-base text-[#4A453B] leading-relaxed">
+        <p className="text-base text-[#333D66] leading-relaxed">
           Register your interest in opening an account and we'll text you the moment Hub Week opens on your campus.
         </p>
 
         {status === 'submitted' ? (
           <div className="mt-10 flex flex-col items-start gap-3">
-            <span className="w-10 h-10 rounded-full bg-[#221F1A] flex items-center justify-center">
-              <Check className="w-5 h-5 text-[#FBF8F2]" />
+            <span className="w-10 h-10 rounded-full bg-[#2F3AE4] flex items-center justify-center">
+              <Check className="w-5 h-5 text-[#FFFFFF]" />
             </span>
-            <div className="text-lg font-display font-semibold text-[#221F1A]">You're on the list</div>
-            <p className="text-sm text-[#6B6558] max-w-sm leading-relaxed">
+            <div className="text-lg font-display font-semibold text-[#0B1330]">You're on the list</div>
+            <p className="text-sm text-[#4C5578] max-w-sm leading-relaxed">
               We'll text {form.name.split(' ')[0]} the moment Hub Week opens at{' '}
               {selectedCampus ? selectedCampus.name : 'your campus'}. Watch for the countdown messages.
             </p>
@@ -91,7 +91,7 @@ export const RegistrationSection: React.FC = () => {
                 setForm(INITIAL_STATE);
                 setStatus('idle');
               }}
-              className="mt-1 text-xs font-mono uppercase tracking-wider text-[#BE5A29] hover:underline"
+              className="mt-1 text-xs font-mono uppercase tracking-wider text-[#2F3AE4] hover:underline"
             >
               Register another student
             </button>
@@ -99,7 +99,7 @@ export const RegistrationSection: React.FC = () => {
         ) : (
           <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-5">
             <div>
-              <label htmlFor="name" className="block text-xs font-mono uppercase tracking-wider text-[#8A8373] mb-1.5">
+              <label htmlFor="name" className="block text-xs font-mono uppercase tracking-wider text-[#7178A0] mb-1.5">
                 Full name
               </label>
               <input
@@ -114,7 +114,7 @@ export const RegistrationSection: React.FC = () => {
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-xs font-mono uppercase tracking-wider text-[#8A8373] mb-1.5">
+              <label htmlFor="phone" className="block text-xs font-mono uppercase tracking-wider text-[#7178A0] mb-1.5">
                 Phone number (for your SMS notice)
               </label>
               <input
@@ -129,7 +129,7 @@ export const RegistrationSection: React.FC = () => {
             </div>
 
             <div>
-              <label htmlFor="campus" className="block text-xs font-mono uppercase tracking-wider text-[#8A8373] mb-1.5">
+              <label htmlFor="campus" className="block text-xs font-mono uppercase tracking-wider text-[#7178A0] mb-1.5">
                 Campus
               </label>
               <select
@@ -150,12 +150,12 @@ export const RegistrationSection: React.FC = () => {
               </select>
             </div>
 
-            {error && <p className="text-xs text-[#BE5A29]">{error}</p>}
+            {error && <p className="text-xs text-red-600">{error}</p>}
 
             <button
               type="submit"
               disabled={status === 'submitting'}
-              className="mt-2 inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#221F1A] hover:bg-[#3a352c] disabled:opacity-60 text-[#FBF8F2] text-sm font-medium transition-colors"
+              className="mt-2 inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#2F3AE4] hover:bg-[#1B2A6B] disabled:opacity-60 text-[#FFFFFF] text-sm font-medium transition-colors"
             >
               {status === 'submitting' ? 'Sending…' : 'Join the list'}
             </button>

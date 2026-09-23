@@ -37,7 +37,7 @@ export const FinancialConvoLogo: React.FC<FinancialConvoLogoProps> = ({
       {variant !== 'mark-only' && (
         <div className={variant === 'full' ? 'mt-3' : 'text-left'}>
           <div
-            className={`font-display font-semibold tracking-wide text-[#221F1A] ${
+            className={`font-display font-semibold tracking-wide text-[#0B1330] ${
               size === 'sm' ? 'text-sm' : size === 'md' ? 'text-base sm:text-lg' : size === 'lg' ? 'text-xl sm:text-2xl' : 'text-2xl sm:text-3xl'
             }`}
           >
@@ -46,7 +46,7 @@ export const FinancialConvoLogo: React.FC<FinancialConvoLogoProps> = ({
 
           {showTagline && (
             <div
-              className={`text-[#BE5A29] tracking-[0.2em] uppercase font-mono ${
+              className={`text-[#2F3AE4] tracking-[0.2em] uppercase font-mono ${
                 size === 'sm' ? 'text-[9px] mt-0.5' : size === 'md' ? 'text-[10px] mt-0.5' : 'text-xs mt-1'
               }`}
             >
